@@ -9,7 +9,7 @@ export default NextAuth({
   providers: [
     EmailProvider({
       server: JSON.parse(process.env.SMTP_SERVER_CONFIG!),
-      from: process.env.EMAIL_FROM,
+      from: process.env.SMTP_SERVER_EMAIL_FROM,
     }),
   ],
 });
